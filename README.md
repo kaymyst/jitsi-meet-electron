@@ -1,17 +1,14 @@
 # Jitsi Meet Electron
 
-Desktop application for [Jitsi Meet] built with [Electron].
+Desktop application for [Connect Remote] built with [Electron].
 
 ![](screenshot.png)
 
 ## Features
 
-- [End-to-End Encryption](https://jitsi.org/blog/e2ee/) support (BETA)
-- Works with any Jitsi Meet deployment
 - Builtin auto-updates
-- ~Remote control~ (currently disabled)
 - Always-On-Top window
-- Support for deeplinks such as `jitsi-meet://myroom` (will open `myroom` on the configured Jitsi instance) or `jitsi-meet://jitsi.mycompany.com/myroom` (will open `myroom` on the Jitsi instance running on `jitsi.mycompany.com`)
+- Support for deeplinks such as `connect-remote://myroom` (will open `myroom` on the configured Jitsi instance) or `connect-remote://remote.mycompany.com/myroom` (will open `myroom` on the Jitsi instance running on `remote.mycompany.com`)
 
 ## Installation
 
