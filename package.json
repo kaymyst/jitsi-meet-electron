@@ -1,9 +1,9 @@
 {
-  "name": "jitsi-meet-electron",
+  "name": "connect-remote-electron",
   "version": "2.4.1",
-  "description": "Electron application for Jitsi Meet",
+  "description": "Electron application for Connect Remote",
   "main": "./build/main.js",
-  "productName": "Jitsi Meet",
+  "productName": "Connect Remote",
   "scripts": {
     "start": "webpack --config ./webpack.main.js --mode development && concurrently \"npm:watch\" \"electron ./build/main.js\"",
     "clean": "rm -rf node_modules build dist",
@@ -18,8 +18,8 @@
     "node": ">=12.0.0"
   },
   "build": {
-    "appId": "org.jitsi.jitsi-meet",
-    "productName": "Jitsi Meet",
+    "appId": "tv.publici.connect-remote",
+    "productName": "Connect Remote",
     "generateUpdatesFilesForAllChannels": true,
     "files": [
       "**/*",
@@ -28,22 +28,22 @@
       "!main.js"
     ],
     "mac": {
-      "artifactName": "jitsi-meet.${ext}",
+      "artifactName": "connect-remote.${ext}",
       "category": "public.app-category.video",
       "darkModeSupport": true,
       "hardenedRuntime": true,
       "entitlements": "entitlements.mac.plist",
       "entitlementsInherit": "entitlements.mac.plist",
       "extendInfo": {
-        "NSCameraUsageDescription": "Jitsi Meet requires access to your camera in order to make video-calls.",
-        "NSMicrophoneUsageDescription": "Jitsi Meet requires access to your microphone in order to make calls (audio/video)."
+        "NSCameraUsageDescription": "Connect Remote requires access to your camera in order to make video-calls.",
+        "NSMicrophoneUsageDescription": "Connect Remote requires access to your microphone in order to make calls (audio/video)."
       }
     },
     "linux": {
-      "artifactName": "jitsi-meet-${arch}.${ext}",
+      "artifactName": "connect-remote-${arch}.${ext}",
       "category": "VideoConference;AudioVideo;Audio;Video;Network",
-      "description": "Jitsi Meet Desktop App",
-      "executableName": "jitsi-meet",
+      "description": "Connect Remote Desktop App",
+      "executableName": "connect-remote",
       "target": [
         {
           "arch": "x64",
@@ -52,7 +52,7 @@
       ]
     },
     "win": {
-      "artifactName": "jitsi-meet.${ext}",
+      "artifactName": "connect-remote.${ext}",
       "target": [
         {
           "arch": [
@@ -68,10 +68,10 @@
     },
     "protocols": [
       {
-        "name": "jitsi-protocol",
+        "name": "cr-protocol",
         "role": "Viewer",
         "schemes": [
-          "jitsi-meet"
+          "connect-remote"
         ]
       }
     ]
@@ -81,14 +81,14 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git://github.com/jitsi/jitsi-meet-electron"
+    "url": "git://github.com/kaymyst/jitsi-meet-electron"
   },
   "keywords": [
     "jingle",
     "webrtc",
     "xmpp",
     "electron",
-    "jitsi-meet"
+    "connect-remote"
   ],
   "author": "Jitsi Team <support@jitsi.org>",
   "readmeFilename": "README.md",

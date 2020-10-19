@@ -271,7 +271,7 @@ class Welcome extends Component<Props, State> {
                                 isInvalid = { locationError }
                                 isLabelHidden = { true }
                                 onChange = { this._onURLChange }
-                                placeholder = { this.state.roomPlaceholder }
+                                placeholder = 'https://remote.public-i.tv/meetingname'
                                 shouldFitContainer = { true }
                                 type = 'text'
                                 value = { this.state.url } />
