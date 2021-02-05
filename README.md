@@ -20,14 +20,16 @@ Download our latest release and you're off to the races!
 
 ### Third-Party builds
 
-[Flathub](https://flathub.org/apps/details/org.jitsi.jitsi-meet)
+[<img src="https://flathub.org/assets/badges/flathub-badge-en.svg"
+     alt="Download On Flathub"
+     height="60">](https://flathub.org/apps/details/org.jitsi.jitsi-meet)
 
 ### Homebrew
 
 For *macOS* user, you can install the application using the following command:
 
 ```
-brew cask install jitsi-meet
+brew install --cask jitsi-meet
 ```
 
 ### Using it with your own Jitsi Meet installation
@@ -48,6 +50,25 @@ If you want to hack on this project, here is how you do it.
 #### Installing dependencies
 
 Install Node.js 12 first (or if you use [nvm](https://github.com/nvm-sh/nvm), switch to Node.js 12 by running `nvm use`).
+
+<details><summary>Extra dependencies for Windows</summary>
+
+```bash
+npm install --global --production windows-build-tools
+npm config set msvs_version 2017
+```
+</details>
+
+<details><summary>Extra dependencies for GNU/Linux</summary>
+
+X11, PNG and zlib development packages are necessary. On Debian-like systems then can be installed as follows:
+
+```bash
+sudo apt install libx11-dev zlib1g-dev libpng-dev libxtst-dev
+```
+</details>
+
+Install all required packages:
 
 ```bash
 npm install
@@ -120,7 +141,7 @@ Builtin auto-updates are not yet handled in macOS due to unsigned build.
 
 ### GNU/Linux
 
-There is a known issue which prevents the app from starting on some Linux distributions: #231
+There is a known issue which prevents the app from starting on some Linux distributions: [#231](https://github.com/jitsi/jitsi-meet-electron/issues/231)
 
 If after downloading it, you can't execute the file directly, try running `chmod u+x ./jitsi-meet-x86_64.AppImage`
 
